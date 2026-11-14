@@ -9,7 +9,7 @@ description = "pytest for AI agents: assert on what your agent did, not just wha
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-dependencies = ["pytest>=7.0"]
+dependencies = ["pytest>=9.2.0"]
 
 [project.optional-dependencies]
 dev = ["ruff", "mypy", "build"]
