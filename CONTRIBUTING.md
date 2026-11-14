@@ -5,7 +5,7 @@ Thanks for helping! agentest is built so that most contributions are **one small
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/agentest.git
+git clone https://github.com/iitking/agentest.git
 cd agentest
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
