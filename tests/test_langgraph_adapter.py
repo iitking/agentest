@@ -7,16 +7,19 @@ class FakeLangGraphAgent:
 
     def invoke(self, input_payload: dict):
         class AIMessage:
-            tool_calls = [{"name": "search_db", "args": {"query": "pricing"}}]
-            usage_metadata = {"total_tokens": 150}
+            def __init__(self):
+                self.tool_calls = [{"name": "search_db", "args": {"query": "pricing"}}]
+                self.usage_metadata = {"total_tokens": 150}
 
         class ToolMessage:
-            type = "tool"
-            name = "search_db"
-            content = "Product price: $29"
+            def __init__(self):
+                self.type = "tool"
+                self.name = "search_db"
+                self.content = "Product price: $29"
 
         class FinalMessage:
-            content = "The pricing is $29 per month."
+            def __init__(self):
+                self.content = "The pricing is $29 per month."
 
         return {
             "messages": [

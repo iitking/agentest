@@ -7,7 +7,8 @@ through `rec.log_llm(tokens=..., cost_usd=...)`.
 from __future__ import annotations
 
 import time
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 from agentest.trace import Step, Trace
 
