@@ -1,0 +1,41 @@
+name: "🔌 New Framework Adapter"
+description: "Request or contribute support for a new AI agent framework (CrewAI, AutoGen, PydanticAI, etc.)"
+title: "[Adapter]: Support <Framework Name>"
+labels: ["adapter", "good first issue", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand `agentest`! Adapters connect agent runtimes to our normalized `Trace` dataclass.
+  - type: input
+    id: framework_name
+    attributes:
+      label: Framework Name
+      description: What agent framework would you like supported? (e.g., CrewAI, AutoGen, PydanticAI, Smolagents, DSPy)
+      placeholder: "e.g. CrewAI"
+    validations:
+      required: true
+  - type: input
+    id: framework_url
+    attributes:
+      label: Framework Repository or Documentation URL
+      placeholder: "https://github.com/crewAIInc/crewAI"
+    validations:
+      required: true
+  - type: textarea
+    id: example_usage
+    attributes:
+      label: How is an agent typically defined in this framework?
+      description: Provide a minimal code snippet showing how an agent runs and invokes tools in this framework.
+      render: python
+      placeholder: |
+        from crewai import Agent, Task, Crew
+        # minimal example
+    validations:
+      required: false
+  - type: checkboxes
+    id: willing_to_contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to submit a Pull Request to implement this adapter myself!

@@ -1,0 +1,40 @@
+name: "✅ New Behavioral Assertion"
+description: "Propose a new assertion function to test agent actions, safety, or budgets"
+title: "[Assertion]: Add `<assertion_name>` assertion"
+labels: ["assertion", "good first issue", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Assertions in `agentest` inspect an execution `Trace` and return a `Check` object with rich diagnostics.
+  - type: input
+    id: assertion_name
+    attributes:
+      label: Assertion Function Name
+      placeholder: "e.g. contains_pii, tool_arg_schema, semantic_similarity"
+    validations:
+      required: true
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: What agent behavior or failure mode does this check?
+      description: Explain why agent developers need this assertion in their pytest test suites.
+      placeholder: "e.g. Detects whether tool inputs contain raw API keys or PII before sending."
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_api
+    attributes:
+      label: Proposed API & Example Usage
+      description: How should the assertion function be called inside a pytest test?
+      render: python
+      placeholder: |
+        assert no_pii_in_args(trace, sensitive_fields=["ssn", "api_key"])
+    validations:
+      required: true
+  - type: checkboxes
+    id: willing_to_contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to submit a Pull Request to implement this assertion myself!

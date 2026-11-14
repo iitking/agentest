@@ -4,10 +4,10 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agentest"
-version = "0.1.0"
+version = "0.2.0"
 description = "pytest for AI agents: assert on what your agent did, not just what it said."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 dependencies = ["pytest>=7.0"]
 
