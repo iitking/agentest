@@ -1,16 +1,20 @@
 <div align="center">
+  <a href="https://github.com/iitking/agentest">
+    <img src="assets/banner.svg" alt="agentest — pytest for AI agents" width="100%">
+  </a>
 
-# 🧪 agentest
+  <br />
+  <br />
 
-### **pytest for AI Agents**
-*Assert on what your agent did, not just what it said.*
+  [![CI](https://github.com/iitking/agentest/actions/workflows/ci.yml/badge.svg)](https://github.com/iitking/agentest/actions/workflows/ci.yml)
+  [![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
+  [![Pytest](https://img.shields.io/badge/pytest-plugin-0A9EDC.svg?logo=pytest&logoColor=white)](https://docs.pytest.org/)
+  [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-[![CI](https://github.com/iitking/agentest/actions/workflows/ci.yml/badge.svg)](https://github.com/iitking/agentest/actions/workflows/ci.yml)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![Pytest](https://img.shields.io/badge/pytest-plugin-0A9EDC.svg?logo=pytest&logoColor=white)](https://docs.pytest.org/)
-[![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+  <br />
+  <br />
 
 <p align="center">
   <a href="#-why-agentest">Why agentest?</a> •
