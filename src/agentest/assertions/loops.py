@@ -11,7 +11,7 @@ from .base import Check
 def _serialize_args(args: dict[str, Any]) -> str:
     try:
         return json.dumps(args, sort_keys=True, default=str)
-    except Exception:
+    except (TypeError, ValueError):
         return str(sorted(args.items()))
 
 

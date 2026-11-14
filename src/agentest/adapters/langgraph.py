@@ -43,7 +43,7 @@ class LangGraphAdapter(Adapter):
         if isinstance(result, dict) and "messages" in result:
             messages = result["messages"]
         elif hasattr(result, "messages"):
-            messages = getattr(result, "messages")
+            messages = result.messages
         elif isinstance(result, list):
             messages = result
 
