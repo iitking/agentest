@@ -2,14 +2,14 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 
 @dataclass
 class Step:
     kind: str  # "llm" | "tool_call" | "final"
-    name: Optional[str] = None  # tool name for tool_call, model name for llm
-    args: Dict[str, Any] = field(default_factory=dict)
+    name: str | None = None  # tool name for tool_call, model name for llm
+    args: dict[str, Any] = field(default_factory=dict)
     output: Any = None
     tokens: int = 0
     cost_usd: float = 0.0
@@ -19,11 +19,11 @@ class Step:
 @dataclass
 class Trace:
     prompt: str
-    steps: List[Step] = field(default_factory=list)
+    steps: list[Step] = field(default_factory=list)
     final_output: Any = None
 
     @property
-    def tool_calls(self) -> List[Step]:
+    def tool_calls(self) -> list[Step]:
         return [s for s in self.steps if s.kind == "tool_call"]
 
     @property

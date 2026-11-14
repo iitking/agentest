@@ -7,7 +7,7 @@ through `rec.log_llm(tokens=..., cost_usd=...)`.
 from __future__ import annotations
 
 import time
-from typing import Any, Callable, Dict, Optional
+from typing import Any, Callable
 
 from agentest.trace import Step, Trace
 
@@ -15,7 +15,7 @@ from .base import Adapter
 
 
 class Recorder:
-    def __init__(self, trace: Trace, tools: Dict[str, Callable]):
+    def __init__(self, trace: Trace, tools: dict[str, Callable]):
         self.trace = trace
         self.tools = tools
 
@@ -30,7 +30,7 @@ class Recorder:
         )
         return output
 
-    def log_llm(self, tokens: int = 0, cost_usd: float = 0.0, model: Optional[str] = None) -> None:
+    def log_llm(self, tokens: int = 0, cost_usd: float = 0.0, model: str | None = None) -> None:
         self.trace.steps.append(Step(kind="llm", name=model, tokens=tokens, cost_usd=cost_usd))
 
 

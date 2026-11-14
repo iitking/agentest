@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Any, Callable, Dict, Optional
+from typing import Any, Callable
 
 from agentest.trace import Trace
 
@@ -20,7 +20,7 @@ class Adapter(ABC):
         agent: Any,
         prompt: str,
         *,
-        tools: Optional[Dict[str, Callable]] = None,
-        mock_tools: Optional[Dict[str, Callable]] = None,
+        tools: dict[str, Callable] | None = None,
+        mock_tools: dict[str, Callable] | None = None,
     ) -> Trace:
         """Run the agent and return a normalized Trace."""

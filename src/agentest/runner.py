@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Callable, Dict, Optional
+from typing import Any, Callable
 
 from agentest.adapters import Adapter, PlainPythonAdapter
 from agentest.trace import Trace
@@ -10,9 +10,9 @@ def run_agent(
     agent: Any,
     prompt: str,
     *,
-    tools: Optional[Dict[str, Callable]] = None,
-    mock_tools: Optional[Dict[str, Callable]] = None,
-    adapter: Optional[Adapter] = None,
+    tools: dict[str, Callable] | None = None,
+    mock_tools: dict[str, Callable] | None = None,
+    adapter: Adapter | None = None,
 ) -> Trace:
     """Run an agent and return its Trace. Defaults to the plain-Python adapter."""
     adapter = adapter or PlainPythonAdapter()
