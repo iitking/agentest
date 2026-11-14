@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentest"
+version = "0.1.0"
+description = "pytest for AI agents: assert on what your agent did, not just what it said."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["pytest>=7.0"]
+
+[project.optional-dependencies]
+dev = ["ruff", "mypy", "build"]
+
+# Makes the plugin load automatically when agentest is installed
+[project.entry-points.pytest11]
+agentest = "agentest.plugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agentest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "examples"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
